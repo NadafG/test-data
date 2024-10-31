@@ -21,7 +21,7 @@ services:
     depends_on:
       - mongo
     environment:
-      - MONGO_URL=mongodb://mongo:27017/mydatabase  # Connection to MongoDB
+      - MONGO_URL=mongodb://mongodb:27017/zoompoint  # Connection to MongoDB
 
   # React Frontend Service
   frontend:
