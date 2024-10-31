@@ -13,7 +13,7 @@ COPY . .
 
 # Set environment variables
 ENV PORT=5000
-ENV MONGO_URI=mongodb://localhost:27017/zoompoint
+ENV MONGO_URI=mongodb://mongodb:27017/mydatabase/zoompoint
 ENV JWT_SECRET=853c6a6d4f563de7ab9d31033ae734ffd6ee54c069af8b8e567d1ca1aaca1c50
 ENV GOOGLE_CLIENT_ID=398342692609-6opsveq6ehqsq2jlh4fbsfvhhct4ptkm.apps.googleusercontent.com
 
