@@ -1,14 +1,13 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Monsters&display=swap');
 
-/* src/styles.css */
+/* General Styles */
 body {
     font-family: 'Monsters', sans-serif;
     background-color: #f8f9fa;
     font-size: 14px;
 }
 
-
+/* Property Card */
 .property-card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -39,13 +38,25 @@ body {
     margin-left: 10px;
 }
 
-.property-project, .property-type {
+.property-project,
+.property-type {
     color: #555;
 }
 
+/* Icons */
 .icon {
     color: #00a29a; /* Updated icon color */
     font-size: 30px;
+}
+
+.icon img {
+    width: 60px; /* Icon size */
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.icon:hover {
+    color: #008c8a; /* Darker shade on hover */
 }
 
 /* Testimonial */
@@ -68,12 +79,12 @@ body {
     font-weight: bold;
 }
 
-
-
+/* Divider */
 hr {
     border-top: 1px solid #ddd; /* Light gray line */
 }
 
+/* Links */
 .text-center a {
     color: #00a29a; /* Updated link color */
     text-decoration: none;
@@ -97,6 +108,7 @@ footer a:hover {
     text-decoration: underline; /* Underline on hover */
 }
 
+/* Social Icons */
 .social-icons a {
     font-size: 1.5rem; /* Size for social media icons */
 }
@@ -105,51 +117,11 @@ footer a:hover {
     color: #00a29a; /* Change color on hover */
 }
 
-
-/* Center the tabs */
+/* Center the Tabs */
 .tab-container {
     display: flex;
     justify-content: center; /* Center horizontally */
     gap: 10px; /* Space between tabs */
-}
-
-.toggle-btn {
-    padding: 10px 20px;
-    cursor: pointer;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-}
-
-.active-tab {
-    background-color: #007bff;
-    color: #fff;
-    border-color: #007bff;
-}
-
-.stylish-input .form-control {
-    border-radius: 0; /* Remove border radius for the input */
-}
-
-.stylish-input .searchBtn {
-    border-radius: 0; /* Remove border radius for the button */
-}
-
-
-
-/* Stylish container for the search */
-.stylish-card {
-    background-color: #f8f9fa;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 100%;
-}
-
-/* Tab container and toggle button styling */
-.tab-container {
-    display: flex;
-    
 }
 
 .tab {
@@ -174,22 +146,7 @@ footer a:hover {
     font-weight: 500;
 }
 
-/* Stylish input group */
-
-/* Stylish input group */
-.stylish-input .form-control {
-    height: 45px;
-    border: 1px solid #ddd;
-    font-size: 16px;
-}
-
-/*.stylish-input .btn {
-    height: 45px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-}*/
-
+/* Stylish Input */
 .stylish-input {
     display: flex;
     align-items: center;
@@ -202,191 +159,16 @@ footer a:hover {
     font-size: 16px;
 }
 
-/*.stylish-input .btn {
-    height: 45px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: white;
-    box-shadow: 0 4px 8px rgba(0, 123, 255, 0.4);
-    transition: all 0.3s ease;
-}*/
-
-/*.stylish-input .btn:hover {
-    background-color: #0056b3;
-    box-shadow: 0 6px 12px rgba(0, 123, 255, 0.5);
+/* Search Card */
+.stylish-card {
+    background-color: #f8f9fa;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
 }
-*/
-
 
 /* Property Slider */
-.property-card {
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.image-wrapper {
-    width: 80px; /* Adjust size as needed */
-    height: 80px; /* Adjust size as needed */
-    overflow: hidden;
-}
-
-.property-image {
-    width: 100%;
-    height: auto;
-}
-
-.new-launch {
-    background-color: #28a745; /* Green */
-    color: white;
-    padding: 5px;
-    border-radius: 5px;
-    display: inline-block;
-    margin-bottom: 10px;
-}
-
-.rera-tag {
-    display: flex;
-    align-items: center;
-}
-
-.rera-tag img {
-    width: 20px; /* Adjust as needed */
-    margin-right: 5px;
-}
-
-.offers {
-    margin-top: 10px; /* Space above offers */
-}
-
-.offer-text {
-    flex-grow: 1; /* Take remaining space */
-}
-
-.view-contact {
-    margin-left: 10px; /* Space between text and button */
-    font-size: 14px; /* Adjust size as needed */
-}
-
-/* Optional: Style the button to look more appealing */
-.view-contact {
-    background-color: #00a29a; /* Updated button color */
-    border: none; /* Remove border */
-}
-
-.view-contact:hover {
-    background-color: #008c8a; /* Darker on hover */
-}
-
-.view-contact {
-    font-size: 0.9rem; /* Smaller font size */
-    padding: 5px 10px; /* Adjust padding */
-}
-
-.view-contact .fa-phone-alt {
-    font-size: 1rem; /* Icon size */
-}
-
-/* Why Use */
-.why-zoompoint {
-    padding: 50px 20px;
-    background-color: #f9f9f9; /* Light background for contrast */
-    text-align: center;
-}
-
-.why-zoompoint h2 {
-    font-size: 2.5em;
-    margin-bottom: 30px;
-    color: #333; /* Dark text for readability */
-}
-
-.features {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.feature {
-    flex: 1;
-    max-width: 300px; /* Limit max width for better layout */
-    margin: 20px;
-    padding: 20px;
-    border-radius: 8px;
-    transition: transform 0.3s;
-}
-
-.feature:hover {
-    transform: translateY(-5px); /* Hover effect */
-}
-
-.icon img {
-    width: 60px; /* Icon size */
-    height: auto;
-    margin-bottom: 15px;
-}
-
-.feature h3 {
-    font-size: 1.5em;
-    margin-bottom: 10px;
-}
-
-.feature p {
-    font-size: 1em;
-    color: #666; /* Gray for supporting text */
-}
-
-.icon {
-    margin-bottom: 10px;
-    color: #00a29a; /* Updated color of the icons */
-    transition: color 0.2s; /* Smooth transition for hover effect */
-}
-
-.icon:hover {
-    color: #008c8a; /* Darker shade on hover */
-}
-
-
-//section devider line 
-
-.session-divider {
-    display: flex;
-    align-items: center;
-}
-
-.line {
-    flex: 1; /* Allow lines to grow */
-    border-bottom: 1px solid #ccc; /* Line style */
-    margin: 0 10px; /* Margin for spacing */
-}
-
-.icon {
-    display: block; /* Ensure it behaves like an inline block */
-}
-
-
-/* Navbar */
-.navbar {
-    background-color: #f8f9fa; /* Light background */
-}
-
-nav-link
-
-.navbar-brand img {
-    transition: transform 0.2s; /* Logo hover effect */
-}
-
-.navbar-brand img:hover {
-    transform: scale(1.1); /* Slightly enlarge on hover */
-}
-
-.nav-link {
-    color: #525252; /* Updated default link color */
-    transition: color 0.2s; /* Transition for link hover */
-    position: relative; /* Needed for the underline effect */
-}
-
-
-
-/* Slider */
 .carousel-item img {
     transition: transform 0.3s ease; /* Smooth scaling on hover */
 }
@@ -409,43 +191,16 @@ nav-link
 }
 
 .product-card {
-     min-height: 400px; /* Adjust this value as needed */
+    min-height: 400px; /* Adjust this value as needed */
     border: none; /* Remove default card border */
     transition: box-shadow 0.3s ease; /* Smooth shadow transition */
 }
-
-.property-image {
-    height: 200px; /* Ensure the image has a fixed height */
-    object-fit: cover;
-}
-
-.custom-icon {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 2rem;
-}
-
-.carousel-control-next-icon,
-.carousel-control-prev-icon {
-    width: 30px;
-    height: 30px;
-    background-color: rgba(0, 0, 0, 0.5); /* Add background color if needed */
-}
-
-.carousel-control-prev {
-    left: -50px; /* Move the previous icon left */
-}
-
-.carousel-control-next {
-    right: -50px; /* Move the next icon right */
-}
-
 
 .product-card:hover {
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15); /* Elevate card on hover */
 }
 
+/* New Launch Tag */
 .new-launch {
     background-color: #ffcc00; /* Custom background for badge */
     color: #000; /* Text color for badge */
@@ -454,6 +209,7 @@ nav-link
     font-weight: bold; /* Bold font */
 }
 
+/* RERA Tag */
 .rera-tag {
     display: flex;
     align-items: center;
@@ -464,13 +220,14 @@ nav-link
     height: 20px; /* Adjust image size */
 }
 
-.address {
-    font-size: 0.9em; /* Smaller font for address */
-}
-
+/* Pricing and Config */
 .price {
     font-size: 1.25em; /* Larger font for price */
     color: #d9534f; /* Custom color for price */
+}
+
+.address {
+    font-size: 0.9em; /* Smaller font for address */
 }
 
 .config {
@@ -480,13 +237,39 @@ nav-link
 .possession {
     font-size: 0.9em; /* Font size for possession info */
 }
-.offer-text{
-    font-family: emoji;
+
+/* Session Divider */
+.session-divider {
+    display: flex;
+    align-items: center;
 }
 
+.line {
+    flex: 1; /* Allow lines to grow */
+    border-bottom: 1px solid #ccc; /* Line style */
+    margin: 0 10px; /* Margin for spacing */
+}
 
-//contact page
+/* Navbar */
+.navbar {
+    background-color: #f8f9fa; /* Light background */
+}
 
+.navbar-brand img {
+    transition: transform 0.2s; /* Logo hover effect */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.nav-link {
+    color: #525252; /* Updated default link color */
+    transition: color 0.2s; /* Transition for link hover */
+    position: relative; /* Needed for the underline effect */
+}
+
+/* Contact Container */
 .contact-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -495,12 +278,14 @@ nav-link
     flex-direction: column;
 }
 
+/* Row */
 .row {
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 20px;
+    margin: 0 -15px; /* Adjust row margin */
 }
 
+/* Info and Form Containers */
 .info-container, .form-container {
     background: #ffffff;
     padding: 20px;
@@ -518,8 +303,10 @@ nav-link
 h1, h2 {
     text-align: center;
     color: #333;
+    margin-bottom: 1rem; /* Moved to h1, h2 for consistency */
 }
 
+/* Form Container */
 .form-container {
     display: flex;
     flex-direction: column;
@@ -556,20 +343,24 @@ textarea {
     resize: none;
 }
 
+/* Button Styles */
+/*
 .btn {
-/*    padding: 10px;
+    padding: 10px;
     background-color: #4CAF50;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s;*/
+    transition: background-color 0.3s;
 }
 
-/*.btn:hover {
+.btn:hover {
     background-color: #45a049;
-}*/
+}
+*/
 
+/* Social Media */
 .social-media {
     margin-top: 10px;
     text-align: center;
@@ -586,6 +377,7 @@ textarea {
     color: #0056b3;
 }
 
+/* Map Container */
 .map-container {
     margin-top: 20px;
     text-align: center;
@@ -595,8 +387,7 @@ textarea {
     margin-bottom: 10px;
 }
 
-//about us 
-
+/* About Us */
 .about-us-container {
     max-width: 80%;
     margin: 0 auto;
@@ -605,9 +396,6 @@ textarea {
     background-color: #f9f9f9; /* Light background for better readability */
     border-radius: 10px; /* Rounded corners */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-}
-.about-us-container {
-    padding: 2rem;
 }
 
 .section {
@@ -640,10 +428,7 @@ textarea {
     flex-direction: row-reverse;
 }
 
-h1, h2 {
-    margin-bottom: 1rem;
-}
-
+/* Lists */
 ul {
     padding-left: 20px;
 }
@@ -652,21 +437,12 @@ ul li {
     margin-bottom: 0.5rem;
 }
 
-
-/* General styles for the container */
+/* Property List Styles */
 .container.property-list {
     margin: 20px auto;
     max-width: 1200px;
 }
 
-/* Title style */
-h2 {
-    font-size: 2rem;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-/* Sidebar styles */
 .sidebar {
     padding: 15px;
     border-right: 1px solid #ccc;
@@ -682,9 +458,7 @@ h2 {
     margin-bottom: 15px;
 }
 
-/* Button styles */
-
-/* Property card styles */
+/* Property Card Styles */
 .property-card {
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -707,13 +481,13 @@ h2 {
     color: #555;
 }
 
-/* Image styles */
+/* Image Styles */
 .card-img-top {
     height: 200px;
     object-fit: cover;
 }
 
-/* Responsive styles */
+/* Responsive Styles */
 @media (max-width: 768px) {
     .property-card {
         margin-bottom: 20px;
@@ -735,19 +509,11 @@ h2 {
     flex-grow: 1;
 }
 
-.row {
-    margin: 0 -15px; /* Adjust row margin */
-}
-
-.col-md-4 {
+.col-md-4, .col-md-12 {
     padding: 15px; /* Add padding for columns */
 }
 
-.col-md-12 {
-    padding: 15px; /* Add padding for list view */
-}
-
-/* Pagination styles */
+/* Pagination Styles */
 .pagination {
     justify-content: center;
 }
@@ -767,6 +533,7 @@ h2 {
     color: white;
 }
 
+/* Property List */
 .property-list {
     display: flex;
     flex-direction: column;
@@ -817,6 +584,7 @@ h2 {
     vertical-align: top;
 }
 
+/* Component Details */
 .component__tableHead {
     font-weight: bold;
     margin-bottom: 5px;
@@ -845,10 +613,10 @@ h2 {
     width: 70px;
     height: 70px;
 }
+
 .table {
     width: 100%;
     border-collapse: collapse;
-   
 }
 
 .table td {
@@ -856,15 +624,7 @@ h2 {
     border: 1px solid #ddd;
 }
 
-.component__tableHead {
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-.component__details {
-    color: #555;
-}
-
+/* Description Card */
 .description-card {
     background-color: #f8f9fa; /* Light background for contrast */
     border: 1px solid #dee2e6; /* Subtle border */
@@ -885,103 +645,28 @@ h2 {
 
 .description-text {
     font-size: 1rem; /* Standard font size for text */
-    line-height: 1.6; /* Increased line height for readability */
-    color: #495057; /* Slightly lighter text color */
+    line-height: 1.5; /* Better readability */
+    color: #495057; /* Darker gray color */
 }
 
-/* Optional: Add some padding and margin to the main container */
-.container {
-    padding: 20px; /* Container padding */
-    margin-top: 20px; /* Space above the container */
-}
-
-    
-
-//property details page 
-
-
-/* PropertyDetail.css */
-.container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-.property-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 20px;
-}
-
-.gallery {
-    position: relative;
-}
-
-.main-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.thumbnails {
+.property-images {
     display: flex;
-    margin-top: 10px;
+    flex-direction: column; /* Stacks images vertically */
 }
 
-.thumbnail {
-    width: 100px;
-    height: 100px;
-    margin-right: 5px;
-    cursor: pointer;
-    transition: transform 0.2s;
-    border: 2px solid transparent;
-    border-radius: 4px;
+.property-images img {
+    margin-bottom: 10px; /* Space between images */
+    border-radius: 0.5rem; /* Rounded corners for images */
 }
 
-.thumbnail:hover {
-    transform: scale(1.1);
-    border: 2px solid #007bff; /* Bootstrap primary color */
-}
-
-.thumbnail.selected {
-    border: 2px solid #007bff;
-}
-
-
-.property-details {
-    margin-bottom: 1rem;
-}
-
-.location,
-.price,
-.config,
-.possession,
-.offer-text {
-    display: flex;
-    align-items: center;
-    margin: 0.5rem 0;
-}
-
-.location .svg-inline--fa,
-.price .svg-inline--fa,
-.config .svg-inline--fa,
-.possession .svg-inline--fa,
-.offer-text .svg-inline--fa {
-    margin-right: 0.5rem; /* Spacing between icon and text */
-}
-
-.start-25 {
-    left: 25% !important;
-}
-
-
-/*new search start*/
-
+/* Note: Any additional properties can be added as necessary */
+/* New Search Start */
 .search-card {
     background: white;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    /* width: 400px; */
+    width: 100%; /* Remove width constraint if not needed */
 }
 
 .search-options {
@@ -1036,63 +721,7 @@ h2 {
     background: #0056b3;
 }
 
-/*New Search End*/
-
-
-.search-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    /* max-width: 600px; */
-}
-
-.search-options .option {
-    margin: 0 10px;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    cursor: pointer;
-    font-weight: 500;
-}
-
-.active-tab {
-    background-color: #007bff;
-    color: white;
-}
-
-.search-bar .form-control {
-    border-radius: 0;
-}
-
-.stylish-card {
-    padding: 2rem;
-    border-radius: 10px;
-    background: white;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.stylish-input input {
-    border: none;
-    outline: none;
-    padding: 10px;
-    border-radius: 4px;
-    width: 80%;
-}
-
-.search-button {
-    background-color: #007bff;
-    border: none;
-    padding: 10px 20px;
-    color: white;
-    cursor: pointer;
-}
-
-.search-button:hover {
-    background-color: #0056b3;
-}
-
-
+/* Dropdown Menu */
 .dropdown-menu {
     position: absolute; /* Ensure it is positioned relative to the nearest positioned ancestor */
     top: 100%; /* Aligns it below the trigger button */
@@ -1104,7 +733,7 @@ h2 {
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Optional shadow for better visibility */
 }
 
-/* Optional: Additional styling for items */
+/* Dropdown Item */
 .dropdown-item {
     padding: 10px 20px; /* Adjust padding */
     color: #333; /* Text color */
@@ -1114,6 +743,7 @@ h2 {
     background-color: #f8f9fa; /* Hover effect */
 }
 
+/* Free Post Button */
 .free-post-button {
     border: 2px solid #808284; /* Border color matching the background */
     border-radius: 25px; /* Rounded borders */
@@ -1122,21 +752,21 @@ h2 {
     font-weight: bold; /* Bold text */
 }
 
-/* Hover effect */
+/* Free Post Button Hover Effect */
 .free-post-button:hover {
-    background-color : #00a29a;
-    border-color:#808284; /* Darker border color on hover */
+    background-color: #00a29a;
+    border-color: #808284; /* Darker border color on hover */
     color: #ffffff; /* Text color remains white */
 }
 
-/* Active state */
+/* Active State */
 .free-post-button.active {
-    background-color : #00a29a;
-    border-color:#808284; /* Darker border color when active */
+    background-color: #00a29a;
+    border-color: #808284; /* Darker border color when active */
     color: #ffffff; /* Text color remains white */
 }
 
-
+/* Property Card */
 .property-card {
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -1165,11 +795,6 @@ h2 {
     color: #007bff; /* Change icon color if needed */
 }
 
-.property-type {
-    font-size: 0.9rem;
-    color: #6c757d;
-}
-
 .property-title {
     font-size: 1.25rem;
     font-weight: bold;
@@ -1194,8 +819,31 @@ h2 {
     text-transform: uppercase; /* Makes the text uppercase */
 }
 
-.tab-lable{
+.tab-label {
     font-size: 0.9rem;
     color: #6c757d;
     text-transform: uppercase; /* Makes the text uppercase */
+}
+
+/* Stylish Card */
+.stylish-card {
+    padding: 2rem;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.stylish-input input {
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 4px;
+    width: 80%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .search-card {
+        width: 100%; /* Full width on smaller screens */
+    }
 }

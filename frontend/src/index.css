@@ -1,3 +1,4 @@
+/* Global Styles */
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -5,6 +6,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa; /* Set global background color */
 }
 
 code {
@@ -12,8 +14,7 @@ code {
     monospace;
 }
 
-
-/* src/index.css or a custom CSS file */
+/* Navbar Styles */
 .navbar {
   background-color: #f8f9fa; /* Light background */
 }
@@ -26,6 +27,7 @@ code {
   color: #0056b3; /* Darker shade on hover */
 }
 
+/* Button Styles */
 .btn-outline-danger {
   transition: background-color 0.3s, color 0.3s;
 }
@@ -35,7 +37,7 @@ code {
   color: white; /* Text color on hover */
 }
 
-/* src/index.css or a custom CSS file */
+/* Carousel Styles */
 .carousel-caption {
   bottom: 20px; /* Adjust vertical positioning */
 }
@@ -52,26 +54,24 @@ code {
   background-color: #007bff; /* Customize button color */
   border-color: #007bff; /* Match border color */
 }
-/* src/styles.css */
-body {
-  font-family: Arial, sans-serif;
-  background-color: #f8f9fa;
-}
 
+/* Property Card Styles */
 .property-card {
   transition: transform 0.3s;
 }
 
 .property-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.05); /* Scale effect on hover */
 }
 
+/* Testimonial Styles */
 .testimonial {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Footer Styles */
 footer {
   background-color: #343a40;
   color: white;
