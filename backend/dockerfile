@@ -2,22 +2,22 @@
 FROM node:16
 
 # Set the working directory
-WORKDIR /usr/src/backend
+WORKDIR /usr/src/app
 
-# Copy package.json and install dependencies
+# Copy package.json and package-lock.json, then install dependencies
 COPY package*.json ./
-RUN npm install
+RUN npm install --production
 
 # Copy the rest of the app code
 COPY . .
 
 # Set environment variables
-ENV PORT=5000
-ENV MONGO_URI=mongodb://mongodb:27017/mydatabase/zoompoint
+ENV PORT=3000
+ENV MONGO_URL=mongodb://mongodb:27017/zoompoint  # Matching the docker-compose.yml
 ENV JWT_SECRET=853c6a6d4f563de7ab9d31033ae734ffd6ee54c069af8b8e567d1ca1aaca1c50
 ENV GOOGLE_CLIENT_ID=398342692609-6opsveq6ehqsq2jlh4fbsfvhhct4ptkm.apps.googleusercontent.com
 
-# Expose the application port (e.g., 3000)
+# Expose the application port (matching the one used in docker-compose.yml)
 EXPOSE 3000
 
 # Command to start the application

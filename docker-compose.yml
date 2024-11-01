@@ -9,11 +9,16 @@ services:
       - "27017:27017"
     volumes:
       - mongo_data:/data/db
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: example
+    networks:
+      - app-network
 
   # Node.js API Service
   api:
     build:
-      context: ./backend   # Path to your Node.js app
+      context: ./backend
     container_name: node_api
     restart: always
     ports:
@@ -21,18 +26,29 @@ services:
     depends_on:
       - mongo
     environment:
-      - MONGO_URL=mongodb://mongodb:27017/zoompoint  # Connection to MongoDB
+      - MONGO_URL=mongodb://mongodb:27017/zoompoint
+      - PORT=3000
+    networks:
+      - app-network
 
   # React Frontend Service
   frontend:
     build:
-      context: ./frontend  # Path to your React app
+      context: ./frontend
     container_name: react_frontend
     restart: always
     ports:
       - "80:80"
     depends_on:
       - api
+    environment:
+      - REACT_APP_API_URL=http://node_api:3000
+    networks:
+      - app-network
 
 volumes:
   mongo_data:
+
+networks:
+  app-network:
+    driver: bridge

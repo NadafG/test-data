@@ -2,7 +2,7 @@
 FROM node:16 as build
 
 # Set the working directory
-WORKDIR /usr/src/forntend
+WORKDIR /usr/src/frontend
 
 # Copy the package.json and install dependencies
 COPY package*.json ./
@@ -16,7 +16,9 @@ RUN npm run build
 
 # Use Nginx to serve the static files
 FROM nginx:alpine
-COPY --from=build /usr/src/forntend/build /usr/share/nginx/html
+
+# Copy the React build output from the previous stage
+COPY --from=build /usr/src/frontend/build /usr/share/nginx/html
 
 # Expose port 80 for the web server
 EXPOSE 80
