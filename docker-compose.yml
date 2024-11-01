@@ -26,8 +26,8 @@ services:
     depends_on:
       - mongo
     environment:
-      - MONGO_URL=mongodb://mongodb:27017/zoompoint
-      - PORT=3000
+      MONGO_URL: mongodb://mongodb:27017/zoompoint  # Changed to dictionary style
+      PORT: 3000                                      # Changed to dictionary style
     networks:
       - app-network
 
@@ -42,7 +42,7 @@ services:
     depends_on:
       - api
     environment:
-      - REACT_APP_API_URL=http://node_api:3000
+      REACT_APP_API_URL: http://node_api:3000         # Changed to dictionary style
     networks:
       - app-network
 
