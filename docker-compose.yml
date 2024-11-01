@@ -26,8 +26,8 @@ services:
     depends_on:
       - mongo
     environment:
-      MONGO_URL: mongodb://mongodb:27017/zoompoint  # Changed to dictionary style
-      PORT: 3000                                      # Changed to dictionary style
+      MONGO_URL: mongodb://mongodb:27017/zoompoint
+      PORT: 3000
     networks:
       - app-network
 
