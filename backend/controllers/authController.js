@@ -42,7 +42,7 @@ exports.register = async (req, res) => {
             email,
             password,
             isVerified: false, // Initially, user is not verified
-            isAdmin: false, 
+            isAdmin: false,
             verificationToken
         });
 
@@ -58,9 +58,78 @@ exports.register = async (req, res) => {
         // Send verification email using Resend
         await sendEmail(
             'no-reply@zoompoint.in',  // Sender's email
-            user.email,              // User's email
+            user.email,               // User's email
             'Verify Your Email Address',  // Subject
-            `<p>Please click the link below to verify your email address:</p><a href="${verificationUrl}">Verify Email</a>`
+            `
+            <html>
+            <head>
+                <style>
+                    body {
+                        font-family: Arial, sans-serif;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #f4f4f4;
+                    }
+                    .container {
+                        max-width: 600px;
+                        margin: 0 auto;
+                        background-color: #ffffff;
+                        border-radius: 8px;
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                        overflow: hidden;
+                    }
+                    .header {
+                        background-color: #007bff;
+                        color: #ffffff;
+                        padding: 20px;
+                        text-align: center;
+                    }
+                    .header h1 {
+                        margin: 0;
+                        font-size: 24px;
+                    }
+                    .content {
+                        padding: 20px;
+                        line-height: 1.6;
+                    }
+                    .button {
+                        display: inline-block;
+                        background-color: #28a745;
+                        color: #ffffff;
+                        padding: 10px 20px;
+                        text-decoration: none;
+                        border-radius: 5px;
+                        font-weight: bold;
+                        margin-top: 20px;
+                    }
+                    .footer {
+                        background-color: #f4f4f4;
+                        text-align: center;
+                        padding: 10px;
+                        font-size: 12px;
+                        color: #666;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <div class="header">
+                        <h1>Welcome to ZoomPoint</h1>
+                    </div>
+                    <div class="content">
+                        <p>Hi there,</p>
+                        <p>Thank you for registering with us! To complete your registration, please verify your email address by clicking the button below:</p>
+                        <a href="${verificationUrl}" class="button">Verify Email</a>
+                        <p>If you did not create an account, you can safely ignore this email.</p>
+                        <p>Thank you!</p>
+                    </div>
+                    <div class="footer">
+                        <p>&copy; 2024 ZoomPoint. All rights reserved.</p>
+                    </div>
+                </div>
+            </body>
+            </html>
+            `
         );
 
         res.status(200).json({ msg: 'Registration successful. Please check your email for verification.' });
@@ -135,14 +204,14 @@ exports.login = async (req, res) => {
                 console.error('Error signing JWT:', err);
                 throw err;
             }
-            res.json({ 
-                token, 
-                user: { 
-                    id: user.id, 
+            res.json({
+                token,
+                user: {
+                    id: user.id,
                     name: user.name, // Add other user details as needed
-                    email: user.email, 
-                    isAdmin: user.isAdmin 
-                } 
+                    email: user.email,
+                    isAdmin: user.isAdmin
+                }
             });
         });
     } catch (err) {
@@ -202,10 +271,10 @@ exports.getUserProfile = async (req, res) => {
         }
 
         console.log('Fetching user with ID:', req.user.id); // Debugging log
-        
+
         // Fetch user by ID, excluding the password field
         const user = await User.findById(req.user.id).select('-password');
-        
+
         // Check if the user is found
         if (!user) {
             return res.status(404).json({ message: 'User not found' });

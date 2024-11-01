@@ -22,6 +22,7 @@ requiredEnvVars.forEach((varName) => {
     }
 });
 
+
 // Initialize Express app
 const app = express();
 
