@@ -4,11 +4,13 @@ FROM node:16
 # Set the working directory
 WORKDIR /usr/src/app
 
-# Copy package.json and package-lock.json, then install dependencies
+# Copy only package.json and package-lock.json to leverage Docker caching
 COPY package*.json ./
+
+# Install dependencies
 RUN npm install --production
 
-# Copy the rest of the app code
+# Copy the rest of the application code
 COPY . .
 
 # Set environment variables
@@ -17,7 +19,7 @@ ENV MONGO_URL=mongodb://mongodb:27017/zoompoint  # Ensure this matches your dock
 ENV JWT_SECRET=853c6a6d4f563de7ab9d31033ae734ffd6ee54c069af8b8e567d1ca1aaca1c50
 ENV GOOGLE_CLIENT_ID=398342692609-6opsveq6ehqsq2jlh4fbsfvhhct4ptkm.apps.googleusercontent.com
 
-# Expose the application port (this matches the one used in docker-compose.yml)
+# Expose the application port
 EXPOSE 3000
 
 # Command to start the application
